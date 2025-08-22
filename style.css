@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Primary */
+    --blue-100: hsl(225, 100%, 94%);
+    --blue-700: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --blue-50: hsl(225, 100%, 98%);
+    --gray-600: hsl(224, 23%, 55%);
+    --blue-950: hsl(223, 47%, 23%);
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--blue-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    height: 100vh;
+}
+
+.container {
+    margin: 3rem 0;
+    background-color: var(--blue-50);
+    width: 100%;
+    border-radius: 1.5rem;
+    text-align: center;
+    box-shadow: 0 1px 19px 2px var(--blue-100);
+    border: none;
+    outline: none;
+}
+
+.image {
+    width: 100%;
+}
+
+.image .hero {
+    border-radius: 1.5rem 1.5rem 0 0;
+    width: 100%;
+}
+
+.container h1 {
+    color: var(--blue-950);
+    font-size: 22px;
+    font-weight: 900;
+    margin: 1.5rem;
+}
+
+.container .info {
+    color: var(--gray-600);
+    line-height: 1.4rem;
+    padding: 0rem 2rem;
+}
+
+.musicBar {
+    margin: 1.5rem 1rem;
+    padding: 1.5rem;
+    background-color: color-mix(in srgb, var(--blue-100) 50%, white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.musicBar .music_name {
+    padding-right: 1.5rem;
+
+}
+
+.musicBar .music_name .name {
+    font-weight: 900;
+    color: var(--blue-950);
+    margin-bottom: 0.1rem;
+}
+
+.musicBar .music_name .price {
+    color: var(--gray-600);
+}
+
+.musicBar .change {
+    color: var(--blue-700);
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed {
+    outline: none;
+    border: none;
+    font-size: 17px;
+    margin: 0 1.5rem;
+    padding: 1rem 2rem;
+    background-color: var(--blue-700);
+    color: var(--blue-50);
+    font-weight: 700;
+    border-radius: 0.6rem;
+    box-shadow: 0 3px 6px 10px var(--blue-100);
+}
+
+.proceed:hover {
+    background-color: color-mix(in srgb, var(--blue-700) 80%, white);
+}
+
+.link {
+    margin: 1.4rem 0 2rem;
+    color: var(--gray-600);
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.link:hover {
+    color: var(--blue-950);
+}
+
+@media (min-width:375px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        width: 25%;
+    }
+
+    .container h1 {
+        font-size: 25px;
+        margin: 1rem;
+    }
+
+    .container .info {
+        line-height: 1.5rem;
+    }
+
+    .musicBar .music_name {
+        padding-right: 4rem;
+
+    }
+
+}
